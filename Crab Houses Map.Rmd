@@ -5,7 +5,7 @@
 ### This is a map of the top three crabhouses in Ocean City, Maryland according to Yelp.
 
 ```{r date, echo=FALSE}
-        Date <- format(Sys.Date(), "%A %d, %Y")
+        Date <- format(Sys.Date(), "%B %d, %Y")
         
 ```
 
