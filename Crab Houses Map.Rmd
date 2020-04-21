@@ -1,0 +1,20 @@
+
+
+## Map Using Leaflet
+
+### This is a map of the top three crabhouses in Ocean City, Maryland according to Yelp.
+
+```{r date, echo=FALSE}
+        Date <- format(Sys.Date(), "%A %d, %Y")
+        
+```
+
+### `r Date`
+
+```{r map, echo=FALSE}
+        library(leaflet)
+        df <- data.frame(Name = c("On the Bay Seafood", "OCM Crabs", "Hooked"), Lat = c(38.369279, 38.392804, 38.400006), 
+                Long = c(-75.070749, -75.064395, -75.062051))
+        my_map <- leaflet(df) %>% addTiles() %>% addMarkers(df$Long, df$Lat, label = df$Name)
+        my_map
+```
